@@ -8,6 +8,7 @@ const UserController = require('./controllers/UserController.controller');
 routes.post('/users/register', UserController.store);
 routes.post('/users/auth', UserController.auth);
 routes.post('/users/forgot', UserController.forgot);
+routes.put('/users/reset/:token', UserController.reset);
 
 routes.get('/tweets', TweetController.index);
 routes.post('/tweets', AuthorizationController, TweetController.store);
